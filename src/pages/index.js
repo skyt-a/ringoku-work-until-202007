@@ -10,6 +10,7 @@ import thumb02 from '../assets/images/thumbs/helloworld.png'
 import thumb03 from '../assets/images/thumbs/charisma.png'
 
 import full03 from '../assets/images/fulls/03.jpg'
+import { withPrefix } from "gatsby";
 
 const DEFAULT_IMAGES = [
     { id: '1', source: thumb01, thumbnail: thumb01, caption: 'Coopet', description: 'ペットでつながるSNSです', url: "https://coopet-51a0b.web.app/"},
@@ -28,6 +29,15 @@ class HomeIndex extends React.Component {
                 <Helmet>
                         <title>{siteTitle}</title>
                         <meta name="description" content={siteDescription} />
+                        <script>{`if (window.netlifyIdentity) {
+                            window.netlifyIdentity.on("init", user => {
+                            if (!user) {
+                                window.netlifyIdentity.on("login", () => {
+                                document.location.href = "/admin/";
+                                });
+                            }
+                            });
+                        }`}</script>
                 </Helmet>
 
                 <div id="main">
