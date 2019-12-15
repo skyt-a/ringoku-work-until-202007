@@ -11,6 +11,7 @@ import thumb03 from '../assets/images/thumbs/charisma.png'
 
 import full03 from '../assets/images/fulls/03.jpg'
 import { withPrefix } from "gatsby";
+import { Link, graphql } from "gatsby"
 
 const DEFAULT_IMAGES = [
     { id: '1', source: thumb01, thumbnail: thumb01, caption: 'Coopet', description: 'ペットでつながるSNSです', url: "https://coopet-51a0b.web.app/"},
@@ -43,14 +44,8 @@ class HomeIndex extends React.Component {
                 <div id="main">
 
                     <section id="one">
-                        <header className="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                            magna sed accumsan arcu neque.</h2>
-                        </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-                        <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
-                        </ul>
+                        <h2>Recent Blog</h2>
+                        <Link to="/about/">about</Link>
                     </section>
 
                     <section id="two">
@@ -63,10 +58,6 @@ class HomeIndex extends React.Component {
                             description,
                             url
                         }))} />
-
-                        <ul className="actions">
-                            <li><a href="#" className="button">Full Portfolio</a></li>
-                        </ul>
                     </section>
 
                     <section id="three">

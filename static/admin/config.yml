@@ -21,5 +21,8 @@ collections:
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Featured Image Description", name: "featuredImageDescription", widget: "text", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Category", name: "categories", widget: "text", required: false }
       - { label: "Tags", name: "tags", widget: "list" }

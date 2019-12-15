@@ -1,5 +1,6 @@
 import React from 'react'
 import '../assets/scss/main.scss'
+import { rhythm } from "../utils/typography"
 
 import Header from './Header'
 
