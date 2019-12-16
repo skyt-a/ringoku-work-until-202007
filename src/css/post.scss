@@ -1,0 +1,23 @@
+.posts {
+    display: flex;
+}
+
+.post {
+    width: 50%;
+    padding: 10px;
+
+    @media (max-width: 414px) {
+        width: 100%;
+    }
+}
+
+.post-image {
+    border-radius: 10px;
+}
+
+.post-link {
+    transition: none;
+    border-bottom: none;
+    color: unset;
+    text-decoration: none;
+}

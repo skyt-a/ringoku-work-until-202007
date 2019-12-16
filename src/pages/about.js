@@ -1,25 +1,30 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 
-export default ({ data }) => (
-  <Layout>
-    <div id="main">
-      <h1>About {data.allMarkdownRemark.totalCount}</h1>
-      {data.allMarkdownRemark.edges.map(({node}) => (
-      <div key={node.id}>
-        <h3>
-          {node.frontmatter.title}
-          <span>
-            {node.frontmatter.date}
-          </span>
-        </h3>
-        <p>{node.excerpt}</p>
+export default ({ data }) => {
+  return ( 
+    <Layout>
+      <div id="main">
+        <h1>投稿数 {data.allMarkdownRemark.totalCount}</h1>
+        <div className="posts">
+          {data.allMarkdownRemark.edges.map(({node}) => (
+            <Link to="detail" className="post-link" state={{ node: node }}>
+              <div key={node.id} className="post">
+                <h3>{node.frontmatter.title}</h3>
+                <img src={node.frontmatter.featuredImage} className="post-image"/>
+                <span>
+                  {node.frontmatter.date}
+                </span>
+                <p>{node.excerpt}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-    ))}
-    </div>
-  </Layout>
-)
+    </Layout>
+  );
+}
 
 export const query = graphql`
 query {
@@ -34,6 +39,7 @@ query {
           title
           date(formatString: "DD MMMM, YYYY")
           tags
+          featuredImage
         }
         excerpt
       }

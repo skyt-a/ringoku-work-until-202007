@@ -13,6 +13,8 @@ import full03 from '../assets/images/fulls/03.jpg'
 import { withPrefix } from "gatsby";
 import { Link, graphql } from "gatsby"
 
+import '../css/index.scss';
+
 const DEFAULT_IMAGES = [
     { id: '1', source: thumb01, thumbnail: thumb01, caption: 'Coopet', description: 'ペットでつながるSNSです', url: "https://coopet-51a0b.web.app/"},
     { id: '2', source: thumb02, thumbnail: thumb02, caption: 'Hello, World!公式ページ', description: '同人ゲームサークル「Hello, World!」の公式ホームページです', url: "https://hello-world.site/"},
@@ -24,7 +26,7 @@ class HomeIndex extends React.Component {
     render() {
         const siteTitle = "Gatsby Starter - Strata"
         const siteDescription = "Site description"
-
+        const data = this.props.data;
         return (
             <Layout>
                 <Helmet>
@@ -44,8 +46,20 @@ class HomeIndex extends React.Component {
                 <div id="main">
 
                     <section id="one">
-                        <h2>Recent Blog</h2>
-                        <Link to="/about/">about</Link>
+                        <h2>Recent Blog　<Link to="/about/">more</Link></h2>
+                        <div className="posts">
+                            {data.allMarkdownRemark.edges.map(({node}) => (
+                                <Link to="detail" className="post-link" state={{ node: node }}>
+                                    <div key={node.id} className="post">
+                                        <img src={node.frontmatter.featuredImage} className="post-image" />
+                                        <h3>{node.frontmatter.title}</h3>
+                                        <span>
+                                            {node.frontmatter.date}
+                                        </span>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
                     </section>
 
                     <section id="two">
@@ -60,7 +74,7 @@ class HomeIndex extends React.Component {
                         }))} />
                     </section>
 
-                    <section id="three">
+                    {/* <section id="three">
                         <h2>Get In Touch</h2>
                         <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
                         <div className="row">
@@ -95,7 +109,7 @@ class HomeIndex extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
 
                 </div>
 
@@ -105,3 +119,25 @@ class HomeIndex extends React.Component {
 }
 
 export default HomeIndex
+
+export const query = graphql`
+query {
+  allMarkdownRemark(
+    limit: 1000
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "DD MMMM, YYYY")
+          tags
+          featuredImage
+        }
+        excerpt
+      }
+    }
+  }
+}
+`
