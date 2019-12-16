@@ -37,4 +37,5 @@ module.exports = {
     },
     `gatsby-remark-images`,
     `gatsby-remark-relative-images`
+  ]
 }
