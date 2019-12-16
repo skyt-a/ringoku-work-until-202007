@@ -36,10 +36,5 @@ module.exports = {
       },
     },
     `gatsby-remark-images`,
-    `gatsby-remark-relative-images`,
-    {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/about/id`] },
-  },
-  ],
+    `gatsby-remark-relative-images`
 }
