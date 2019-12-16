@@ -5,6 +5,9 @@ import Layout from "../components/layout"
 export default ({ location }) => {
   const { state = {} } = location;
   const { node } = state;
+  if (!node) {
+    return null;
+  }
   return ( 
     <Layout>
       <div id="main">
