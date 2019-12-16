@@ -7,7 +7,7 @@ export default ({ data }) => {
     <Layout>
       <div id="main">
         <h1>投稿数 {data.allMarkdownRemark.totalCount}</h1>
-        <div className="posts">
+        <div className="row">
           {data.allMarkdownRemark.edges.map(({node}) => (
             <Link to="detail" key={node.id} className="6u 12u$(xsmall) post-link" state={{ node: node }}>
               <img src={node.frontmatter.featuredImage} className="post-image"/>
