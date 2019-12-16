@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Strata by HTML5 UP",
-    author: "Hunter Chang",
-    description: "A Gatsby.js Starter based on Strata by HTML5 UP"
+    title: "RinGoku Work",
+    author: "Yuta Sakou(RinGoku)",
+    description: "ITエンジニアとして活動している酒向祐太(りんごく)の活動についてのサイトです"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'RinGoku Work',
+        short_name: 'RinGoku Work',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',

@@ -24,8 +24,8 @@ const DEFAULT_IMAGES = [
 class HomeIndex extends React.Component {
 
     render() {
-        const siteTitle = "Gatsby Starter - Strata"
-        const siteDescription = "Site description"
+        const siteTitle = "Yuta Sakou(RinGoku) Work"
+        const siteDescription = "ITエンジニアとして活動している酒向祐太(りんごく)の活動についてのサイトです"
         const data = this.props.data;
         return (
             <Layout>
@@ -49,14 +49,12 @@ class HomeIndex extends React.Component {
                         <h2>Recent Blog　<Link to="/about/">more</Link></h2>
                         <div className="posts">
                             {data.allMarkdownRemark.edges.map(({node}) => (
-                                <Link to="detail" className="post-link" state={{ node: node }}>
-                                    <div key={node.id} className="post">
-                                        <img src={node.frontmatter.featuredImage} className="post-image" />
-                                        <h3>{node.frontmatter.title}</h3>
-                                        <span>
-                                            {node.frontmatter.date}
-                                        </span>
-                                    </div>
+                                <Link to="detail" key={node.id} className="post-link 6u 12u$(xsmall)" state={{ node: node }}>
+                                    <img src={node.frontmatter.featuredImage} className="post-image" />
+                                    <h3>{node.frontmatter.title}</h3>
+                                    <span>
+                                        {node.frontmatter.date}
+                                    </span>
                                 </Link>
                             ))}
                         </div>
@@ -123,7 +121,7 @@ export default HomeIndex
 export const query = graphql`
 query {
   allMarkdownRemark(
-    limit: 1000
+    limit: 4
   ) {
     totalCount
     edges {
