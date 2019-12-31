@@ -1,6 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import '../css/detail.scss';
 
 export default ({ location }) => {
   const { state = {} } = location;
@@ -11,15 +11,17 @@ export default ({ location }) => {
   return ( 
     <Layout>
       <div id="main">
-        <div>
-          <h3>
+        <div class="detail">
+          <h2 class="detail__title">
             {node.frontmatter.title}
-            <img src={node.frontmatter.featuredImage} />
             <span>
-              {node.frontmatter.date}
-            </span>
-          </h3>
-          <p>{node.excerpt}</p>
+            {node.frontmatter.date}
+          </span>
+          </h2>
+          <img src={node.frontmatter.featuredImage} />
+          <section class="detail__excerpt">
+            <p>{node.excerpt}</p>
+          </section>
         </div>
       </div>
     </Layout>

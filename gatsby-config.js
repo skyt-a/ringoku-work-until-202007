@@ -36,6 +36,17 @@ module.exports = {
       },
     },
     `gatsby-remark-images`,
-    `gatsby-remark-relative-images`
+    `gatsby-remark-relative-images`,
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-56P3656",
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" },
+        // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
+        // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
+        dataLayerName: "work",
+      },
+    },
   ]
 }

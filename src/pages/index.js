@@ -50,8 +50,10 @@ class HomeIndex extends React.Component {
                         <div className="row">
                             {data.allMarkdownRemark.edges.map(({node}) => (
                                 <Link to="detail" key={node.id} className="post-link 6u 12u$(xsmall)" state={{ node: node }}>
-                                    <img src={node.frontmatter.featuredImage} className="post-image" />
-                                    <h3>{node.frontmatter.title}</h3>
+                                    <div class="post-image-wrapper">
+                                        <img src={node.frontmatter.featuredImage} className="post-image" />
+                                    </div>
+                                    <h3 class="post-title">{node.frontmatter.title}</h3>
                                     <span>
                                         {node.frontmatter.date}
                                     </span>
