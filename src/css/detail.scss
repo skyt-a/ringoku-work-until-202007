@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+.detail__image-wrapper {
+    text-align: center;
+    overflow: hidden;
+    max-height: 480px;
+}
+
 .detail__excerpt {
     padding-top: 24px;
     font-size: 1.2rem;
