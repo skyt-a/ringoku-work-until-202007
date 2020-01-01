@@ -9,9 +9,11 @@ export default ({ data }) => {
         <h1>投稿数 {data.allMarkdownRemark.totalCount}</h1>
         <div className="row">
           {data.allMarkdownRemark.edges.map(({node}) => (
-            <Link to="detail" key={node.id} className="6u 12u$(xsmall) post-link" state={{ node: node }}>
-              <img src={node.frontmatter.featuredImage} className="post-image"/>
-              <h3>{node.frontmatter.title}</h3>
+            <Link to="detail" key={node.id} className="4u 12u$(xsmall) post-link" state={{ node: node }}>
+              <div className="post-image-wrapper">
+                <img src={node.frontmatter.featuredImage} className="post-image"/>
+              </div>
+              <h3 className="post-title">{node.frontmatter.title}</h3>
               <span>
                 {node.frontmatter.date}
               </span>

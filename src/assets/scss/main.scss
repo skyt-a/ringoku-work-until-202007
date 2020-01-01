@@ -40,7 +40,7 @@
 		)
 	));
 
-	$size-header-width: 35%;
+	$size-header-width: 25%;
 	$size-header-pad: 4em;
 
 /* Basic */
@@ -946,6 +946,10 @@
 			margin: 0 0 (_size(element-margin) * 0.5) 0;
 			width: 6.25em;
 		}
+
+		@media (max-width: 768px) {
+			max-height: 400px;
+		}
 	}
 
 /* Footer */
@@ -990,7 +994,7 @@
 
 	#main {
 		margin-left: $size-header-width;
-		max-width: 50em + $size-header-pad;
+		// max-width: 50em + $size-header-pad;
 		padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
 		width: calc(100% - #{$size-header-width});
 
