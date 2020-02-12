@@ -1,0 +1,192 @@
+@import './common.scss';
+
+.TopHeader {
+    position: fixed;
+    top: 0;
+    display: flex;
+    z-index: -1;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(
+        to bottom,
+        rgb(31, 71, 120),
+        rgb(69, 132, 180)
+    );
+    animation: backgroundSky 1s ease 0s 1 forwards;
+}
+
+.TopHeader__CloudWrap {
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.TopHeader__Cloud {
+    &:first-child {
+        animation: loop 200s -100s linear infinite;
+    }
+      
+    &:last-child {
+        animation: loop2 200s linear infinite;
+    }
+}
+
+.TopContent {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.TopContent__TitleWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.TopContent__Title {
+    position: relative;
+    text-align: center;
+    padding-bottom: 2px;
+    color: white;
+    font-size: 4.5rem;
+    font-family: 'DidoteTextW01-Italic';
+    font-weight: 100;
+    will-change: transform;
+    opacity: 0;
+    animation: popup 0.3s ease 1s 1 forwards;
+}
+
+.TopContent__TitleLine {
+    width: 0;
+    height: 1px;
+    background-color: rgba($color: #fff, $alpha: 0);
+    transform-origin: center;
+    will-change: transform;
+    animation: line 0.5s ease 1.5s 1 forwards;
+}
+
+$section_margin: 50vh;
+
+.TopContent__Section {
+    position: relative;
+    width: 80vw;
+    margin: auto auto $section_margin;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    font-size: 2rem;
+    animation: bibe 20s ease 1s infinite forwards;
+    will-change: transform;
+
+    &::after {
+        position: absolute;
+        bottom: -$section_margin;
+        right: 40vw;
+        content: '';
+        width: 3px;
+        height: $section_margin;
+        background-color: rgba($color: #fff, $alpha: 0.3);
+    }
+}
+
+.TopContent__SectionTitle {
+    position: relative;
+    font-size: 4rem;
+    padding-bottom: 2px;
+    
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: black;
+        content: '';
+    }
+}
+
+.TopContent__SectionContent {
+    line-height: 1.5;
+}
+
+.TopContent__SectionIcon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@keyframes line {
+    0% {
+        width: 0;
+        background-color: rgba($color: #fff, $alpha: 0);
+    }
+
+    100% {
+        width: 100%;
+        background-color: rgba($color: #fff, $alpha: 0.8);
+    }
+}
+
+@keyframes bibe {
+    0% {
+        transform: translate(10px, -10px);
+    }
+    20% {
+        transform: translate(20px, 20px);
+    }
+    40% {
+        transform: translate(-10px, -10px);
+    }
+    60% {
+        transform: translate(10px, -10px);
+    }
+    80% {
+        transform: translate(-10px, 10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes backgroundSky {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popup {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes loop {
+    0% {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes loop2 {
+    0% {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-200%);
+    }
+  }

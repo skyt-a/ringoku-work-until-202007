@@ -1,19 +1,12 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-
-import Layout from '../components/layout'
-// import Lightbox from 'react-images'
+import React from 'react';
+import '../css/top.scss';
+import CommonHelmet from './common-helmet';
+import cloud from '../assets/images/cloud.png';
 import Gallery from '../components/Gallery'
 
 import thumb01 from '../assets/images/thumbs/coopet.png'
 import thumb02 from '../assets/images/thumbs/helloworld.png'
 import thumb03 from '../assets/images/thumbs/charisma.png'
-
-import full03 from '../assets/images/fulls/03.jpg'
-import { withPrefix } from "gatsby";
-import { Link, graphql } from "gatsby"
-
-import '../css/index.scss';
 
 const DEFAULT_IMAGES = [
     { id: '1', source: thumb01, thumbnail: thumb01, caption: 'Coopet', description: 'ペットでつながるSNSです', url: "https://coopet-51a0b.web.app/"},
@@ -21,123 +14,47 @@ const DEFAULT_IMAGES = [
     { id: '3', source: thumb03, thumbnail: thumb03, caption: 'カリスマを取り戻せ', description: '2019年5月5日(日)開催の 第十六回 博麗神社例大祭に出品した同人2D縦スクロールシューティングゲーム', url: "https://ringoku98.thebase.in/items/24584354"},
 ];
 
-class HomeIndex extends React.Component {
+const TopIndex = () => (
+    <main>
+        <CommonHelmet />
+        <header className="TopHeader">
+            <div className="TopHeader__CloudWrap">
+                <img className="TopHeader__Cloud" src={cloud} alt=""/>
+                <img className="TopHeader__Cloud" src={cloud} alt=""/>
+            </div>
+        </header>
+        <article className="TopContent">
+            <section className="TopContent__TitleWrap">
+                <h1 className="TopContent__Title">Hello, World!</h1>
+                <div className="TopContent__TitleLine" />
+            </section>
+            <section className="TopContent__Section">
+                <h2 className="TopContent__SectionTitle">私について</h2>
+                <p className="TopContent__SectionContent">
+                    酒向　祐太(Sakou Yuta)<br/>1993年生まれ。横浜国立大学経営学部経営システム科学科卒。
+                    プログラミングとは無縁の学生生活を送っていたが、幼少時よりインターネット文化へ触れていたこともあり、
+                    IT企業へ就職し、プログラミングと出会う。<br/>その奥深さやもの作りの楽しさに夢中になり、2019年8月にフリーランスとして独立。<br />
+                    将来的にはデザイナー領域にも踏み込みたいと思い勉強中。<br />
+                    猫の「ゆき」と二人暮らし。
+                </p>
+                <ul className="icons TopContent__SectionIcon">
+                    <li><a href="https://twitter.com/RinGoku98" target="_blank" rel="noopener noreferrer" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
+                    <li><a href="https://github.com/RinGoku" target="_blank" rel="noopener noreferrer" className="icon fa-github"><span className="label">Github</span></a></li>
+                    <li><a href="mailto:yuyu80105@gmail.com" target="_blank" rel="noopener noreferrer" className="icon fa-envelope-o"><span className="label">Email</span></a></li>
+                </ul>
+            </section>
 
-    render() {
-        const siteTitle = "Yuta Sakou(RinGoku) Work"
-        const siteDescription = "ITエンジニアとして活動している酒向祐太(りんごく)の活動についてのサイトです"
-        const data = this.props.data;
-        return (
-            <Layout>
-                <Helmet>
-                        <title>{siteTitle}</title>
-                        <meta name="description" content={siteDescription} />
-                        <script>{`if (window.netlifyIdentity) {
-                            window.netlifyIdentity.on("init", user => {
-                            if (!user) {
-                                window.netlifyIdentity.on("login", () => {
-                                document.location.href = "/admin/";
-                                });
-                            }
-                            });
-                        }`}</script>
-                </Helmet>
-
-                <div id="main">
-
-                    <section id="one">
-                        <h2>Recent Blog　<Link to="/about/">more</Link></h2>
-                        <div className="row">
-                            {data && data.allMarkdownRemark.edges.map(({node}) => (
-                                <Link to="detail" key={node.id} className="post-link 4u 12u$(xsmall)" state={{ node: node }}>
-                                    <div class="post-image-wrapper">
-                                        <img src={node.frontmatter.featuredImage} className="post-image" />
-                                    </div>
-                                    <h3 class="post-title">{node.frontmatter.title}</h3>
-                                    <span>
-                                        {node.frontmatter.date}
-                                    </span>
-                                </Link>
-                            ))}
-                        </div>
-                    </section>
-
-                    <section id="two">
-                        <h2>Recent Work</h2>
-
-                        <Gallery images={DEFAULT_IMAGES.map(({ id, source, thumbnail, caption, description, url }) => ({
+            <section className="TopContent__Section">
+                <h2 className="TopContent__SectionTitle">作ったもの</h2>
+                <Gallery images={DEFAULT_IMAGES.map(({ source, thumbnail, caption, description, url }) => ({
                             source,
                             thumbnail,
                             caption,
                             description,
                             url
                         }))} />
-                    </section>
+            </section>
+        </article>
+    </main>);
 
-                    {/* <section id="three">
-                        <h2>Get In Touch</h2>
-                        <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-                        <div className="row">
-                            <div className="8u 12u$(small)">
-                                <form method="post" action="#">
-                                    <div className="row uniform 50%">
-                                        <div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-                                        <div className="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                                        <div className="12u"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-                                    </div>
-                                </form>
-                                <ul className="actions">
-                                    <li><input type="submit" value="Send Message" /></li>
-                                </ul>
-                            </div>
-                            <div className="4u 12u$(small)">
-                                <ul className="labeled-icons">
-                                    <li>
-                                        <h3 className="icon fa-home"><span className="label">Address</span></h3>
-                                        1234 Somewhere Rd.<br />
-                                        Nashville, TN 00000<br />
-                                        United States
-                                    </li>
-                                    <li>
-                                        <h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
-                                        000-000-0000
-                                    </li>
-                                    <li>
-                                        <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-                                        <a href="#">hello@untitled.tld</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section> */}
-
-                </div>
-
-            </Layout>
-        )
-    }
-}
-
-export default HomeIndex
-
-export const query = graphql`
-query {
-  allMarkdownRemark(
-    limit: 4
-  ) {
-    totalCount
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          date(formatString: "YYYY/MM/DD")
-          tags
-          featuredImage
-        }
-        excerpt
-      }
-    }
-  }
-}
-`
+export default TopIndex;

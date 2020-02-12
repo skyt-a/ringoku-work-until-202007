@@ -1,0 +1,89 @@
+@import url(//db.onlinewebfonts.com/c/16efa2896f117dae2debeb23ab4715dd?family=DidoteTextW01-Italic);
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../assets/fonts/NotoSansCJKjp-Thin.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/NotoSansCJKjp-Thin.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../assets/fonts/NotoSansCJKjp-Thin.woff') format('woff'),
+    /* Modern Browsers */ url('../assets/fonts/NotoSansCJKjp-Thin.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../assets/fonts/NotoSansCJKjp-Light.eot');
+  src: url('../assets/fonts/NotoSansCJKjp-Light.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/NotoSansCJKjp-Light.woff') format('woff'),
+    url('../assets/fonts/NotoSansCJKjp-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../assets/fonts/NotoSansCJKjp-DemiLight.eot');
+  src: url('../assets/fonts/NotoSansCJKjp-DemiLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/NotoSansCJKjp-DemiLight.woff') format('woff'),
+    url('../assets/fonts/NotoSansCJKjp-DemiLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/NotoSansCJKjp-Regular.eot');
+  src: url('../assets/fonts/NotoSansCJKjp-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/NotoSansCJKjp-Regular.woff') format('woff'),
+    url('../assets/fonts/NotoSansCJKjp-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../assets/fonts/NotoSansCJKjp-Medium.eot');
+  src: url('../assets/fonts/NotoSansCJKjp-Medium.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/NotoSansCJKjp-Medium.woff') format('woff'),
+    url('../assets/fonts/NotoSansCJKjp-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/NotoSansCJKjp-Bold.eot');
+  src: url('../assets/fonts/NotoSansCJKjp-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/NotoSansCJKjp-Bold.woff') format('woff'),
+    url('../assets/fonts/NotoSansCJKjp-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../assets/fonts/NotoSansCJKjp-Black.eot');
+  src: url('../assets/fonts/NotoSansCJKjp-Black.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/NotoSansCJKjp-Black.woff') format('woff'),
+    url('../assets/fonts/NotoSansCJKjp-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DidoteTextW01-Italic';
+  src: url('//db.onlinewebfonts.com/t/16efa2896f117dae2debeb23ab4715dd.eot');
+  src: url('//db.onlinewebfonts.com/t/16efa2896f117dae2debeb23ab4715dd.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/16efa2896f117dae2debeb23ab4715dd.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/16efa2896f117dae2debeb23ab4715dd.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/16efa2896f117dae2debeb23ab4715dd.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/16efa2896f117dae2debeb23ab4715dd.svg#DidoteTextW01-Italic')
+      format('svg');
+}
