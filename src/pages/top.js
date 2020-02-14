@@ -24,7 +24,7 @@ const DEFAULT_IMAGES = [
 class HomeIndex extends React.Component {
 
     render() {
-        const siteTitle = "Yuta Sakou(RinGoku) Work"
+        const siteTitle = "Yuta Sakou(RinGoku) Work「Hello, World!」"
         const siteDescription = "ITエンジニアとして活動している酒向祐太(りんごく)の活動についてのサイトです"
         const data = this.props.data;
         return (
