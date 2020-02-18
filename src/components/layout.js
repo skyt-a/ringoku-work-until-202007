@@ -1,18 +1,26 @@
 import React from 'react'
 import '../assets/scss/main.scss'
-import { rhythm } from "../utils/typography"
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { theme } from './Theme';
 
-import Header from './Header'
+const GlobalStyle = createGlobalStyle`
+  html, body {
+    overflow-x: hidden;
+  }
+  html {
+    font-size: 10px;
+  }
+`
 
 class Template extends React.Component {
     render() {
         const { children } = this.props
-
         return (
-            <div>
-                <Header />
+            <ThemeProvider theme={theme}>
+                {/* <Header /> */}
+                <GlobalStyle />
                 {children}
-            </div>
+            </ThemeProvider>
         )
     }
 }

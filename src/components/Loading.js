@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes, createGlobalStyle } from 'styled-components';
+import '../css/variable.scss';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -35,16 +36,16 @@ const rotation = keyframes`
 
 const transformation = keyframes`
     0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    50% {
         transform: scale(1);
-        opacity: 1;
+    }
+    89% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.2);
     }
     100% {
         transform: scale(0);
-        opacity: 0;
     }
 `;
 
@@ -82,14 +83,14 @@ const Element = styled.span`
 
 const Element1 = styled(Element)`
     right: -50vmax;
-    background-color: #d06d8c;
+    background-color: ${props => props.theme.primary};
     animation: ${rotation} infinite 3s linear;
 `;
 
 const Element2 = styled(Element)`
     left: -50vmax;
-    top: -50vmax;
-    background-color: #0074bf;
+    top: -25vmax;
+    background-color: ${props => props.theme.secondary};
     animation: ${rotation} infinite 3s linear;
 `;
 
