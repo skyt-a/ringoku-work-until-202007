@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/logo.png';
+import logoSVG from '../assets/images/logo.svg';
 import styled, {keyframes, createGlobalStyle} from 'styled-components';
 import NavMenu from '../components/NavMenu';
 
@@ -15,7 +16,7 @@ const Top = () => (
     <Main>
         <GlobalStyle />
         <NavMenu />
-        <Logo src={logo}/>      
+        <Logo>Hello, World!(フロントエンドエンジニア酒向祐太のポートフォリオ)</Logo>
     </Main>
 );
 
@@ -68,10 +69,22 @@ const popup = keyframes`
     }
 `;
 
-const Logo = styled.img`
+const Logo = styled.h1`
     height: 70vh;
+    width: 100vw;
+    background-image: url(${logoSVG});
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
     transform: rotate(-5deg);
     animation: ${popup} 0.4s ease 0s, ${anim} infinite linear 1s 1.4s;
+    text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+
+    @media (max-width: 767px) {
+        background-image: url(${logo});
+    }
 `;
 
 const Main = styled.main`
