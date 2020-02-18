@@ -9,7 +9,7 @@ import thumb02 from '../assets/images/thumbs/helloworld.png'
 import thumb03 from '../assets/images/thumbs/charisma.png'
 import { Loading } from '../components/Loading';
 import Layout from '../components/layout';
-import { Top } from './top';
+import Top from './top';
 
 const products = [
     { source: thumb01, thumbnail: thumb01, caption: 'Coopet', description: 'ペットでつながるSNSです', url: "https://coopet-51a0b.web.app/"},
