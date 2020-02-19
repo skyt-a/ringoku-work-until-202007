@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react"
+import 'intersection-observer';
 
 export const useIntersectionObserver = () => {
     const targetRef = useRef(null);
@@ -22,6 +23,6 @@ export const useIntersectionObserver = () => {
         }
         window.addEventListener('scroll', handleScroll);
         return () => observer.disconnect();
-    }, [diff]);
+    }, []);
     return [targetRef, isIntersected];
 }

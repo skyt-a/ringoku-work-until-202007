@@ -11,14 +11,14 @@ const NavMenu = () => {
     <>
         {isOpen && 
         <NavList>
-          <Close onClick={onClose}　/>
+          <Close onClick={onClose} aria-controls="menu" aria-expanded="false" />
           <NavLinks>
             <NavLink to="top">Top</NavLink>
             <NavLink to="about">「Hello,World!」について</NavLink>
             <NavLink to="aboutme">私について</NavLink>
           </NavLinks>
         </NavList> }
-        <NavButton aria-controls="menu" aria-expand={isOpen} onClick={onOpen}>
+        <NavButton aria-controls="menu" aria-expanded="true" onClick={onOpen}>
             <NavLine1st />
             <NavLine />
             <NavLine3rd />

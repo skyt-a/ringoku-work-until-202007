@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import NavMenu from "../components/NavMenu";
 import styled, { createGlobalStyle, keyframes } from "styled-components";
 import Logo, { LogoMini } from "../components/Logo";
+import History from "../components/History";
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -27,6 +28,8 @@ export default ({ data }) => {
             現在はフロントエンドエンジニアとして活動しているが、最初に触れたのはJavaであり、バックエンドの経験もある。<br />
             将来的にはデザイナー領域にも踏み込みたいと思い勉強中。
           </Content>
+          <Title>略歴</Title>
+          <History />
         </Section>
       </Main>
     </Layout>
@@ -55,7 +58,7 @@ const Section = styled.section`
   margin: auto;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   font-size: 3rem;
 `;
 

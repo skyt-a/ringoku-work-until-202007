@@ -69,12 +69,6 @@
 		border-bottom: dotted 1px;
 		color: _palette(accent1, bg);
 		text-decoration: none;
-
-		&:hover {
-			border-bottom-color: transparent;
-			color: _palette(accent1, bg) !important;
-			text-decoration: none;
-		}
 	}
 
 	strong, b {
