@@ -67,7 +67,7 @@ const popup = keyframes`
 const LogoNormal = styled.h1`
     height: 70vh;
     width: 100vw;
-    background-image: url(${logoSVG});
+    background-image: url(${logo});
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -76,10 +76,6 @@ const LogoNormal = styled.h1`
     text-indent:100%;
 	white-space:nowrap;
 	overflow:hidden;
-
-    @media (max-width: 767px) {
-        background-image: url(${logo});
-    }
 `;
 
 const LogoHue = styled(LogoNormal)`
