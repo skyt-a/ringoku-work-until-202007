@@ -13,7 +13,7 @@ const NavMenu = () => {
         <NavList>
           <Close onClick={onClose}　/>
           <NavLinks>
-            <NavLink to="/">Top</NavLink>
+            <NavLink to="top">Top</NavLink>
             <NavLink to="about">「Hello,World!」について</NavLink>
             <NavLink to="aboutme">私について</NavLink>
           </NavLinks>
