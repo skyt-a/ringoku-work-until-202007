@@ -6,7 +6,6 @@ const siteDescription = "ITエンジニアとして活動している酒向祐�
 const CommonHelmet = () => <Helmet>
     <title>{siteTitle}</title>
     <meta name="description" content={siteDescription} />
-    <link href="//db.onlinewebfonts.com/c/16efa2896f117dae2debeb23ab4715dd?family=DidoteTextW01-Italic" rel="stylesheet" type="text/css"/>
     <script>
         {`
         if (window.netlifyIdentity) {
