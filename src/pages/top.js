@@ -4,6 +4,7 @@ import NavMenu from '../components/NavMenu';
 
 import '../css/top.scss';
 import { LogoEffect } from '../components/Logo';
+import Layout from "../components/layout";
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -12,11 +13,13 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Top = () => (
-    <Main>
-        <GlobalStyle />
-        <NavMenu />
-        <LogoEffect />
-    </Main>
+    <Layout>
+        <Main>
+            <GlobalStyle />
+            <NavMenu />
+            <LogoEffect />
+        </Main>
+    </Layout>
 );
 
 const Main = styled.main`
