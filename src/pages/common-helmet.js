@@ -18,7 +18,7 @@ const CommonHelmet = () => <Helmet>
                 }
             });
         }
-        window.datalayer = window.datalayer || [];
+        window.dataLayer = window.dataLayer || [];
         `
         }
     </script>
