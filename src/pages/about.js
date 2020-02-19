@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import NavMenu from "../components/NavMenu";
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, keyframes } from "styled-components";
+import Logo, { LogoMini } from "../components/Logo";
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -14,6 +15,7 @@ export default ({ data }) => {
     <Layout>
       <GlobalStyle />
       <NavMenu />
+      <LogoMini />
       <Main>
         <Section>
           <Title>Hello,World!とは</Title>
@@ -33,13 +35,25 @@ export default ({ data }) => {
   );
 }
 
+const fadeIn = keyframes`
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`
+
 const Main = styled.main`
-  overflow: auto;
+  animation: ${fadeIn} 0.3s linear;
 `;
 
 const Section = styled.section`
   max-width: 1024px;
-  padding: 20vh 24px 24px;
+  padding: 24px;
   margin: auto;
 `;
 
