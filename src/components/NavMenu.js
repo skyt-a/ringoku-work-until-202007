@@ -14,7 +14,8 @@ const NavMenu = () => {
           <Close onClick={onClose}　/>
           <NavLinks>
             <NavLink to="/">Top</NavLink>
-            <NavLink to="about">About</NavLink>
+            <NavLink to="about">「Hello,World!」について</NavLink>
+            <NavLink to="aboutme">私について</NavLink>
           </NavLinks>
         </NavList> }
         <NavButton aria-controls="menu" aria-expand={isOpen} onClick={onOpen}>
@@ -71,9 +72,8 @@ const NavLinks = styled.div`
 const NavLink = styled(Link)`
     display: block;
     width: 100%;
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: none;
-    border-bottom: none;
     margin-bottom: 12px;
     color:  ${props => props.theme.primary};
 `;
