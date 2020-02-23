@@ -1,14 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import NavMenu from "../components/NavMenu";
-import styled, { createGlobalStyle, keyframes } from "styled-components";
-import Logo, { LogoMini } from "../components/Logo";
-
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    overflow-y: auto;
-  }
-`
+import styled, { keyframes } from "styled-components";
+import { LogoMini } from "../components/Logo";
+import { Section, Main, Title, GlobalStyle } from "./common/component";
 
 export default ({ data }) => {
   return ( 
@@ -47,20 +42,4 @@ const fadeIn = keyframes`
   }
 `
 
-const Main = styled.main`
-  animation: ${fadeIn} 0.3s linear;
-`;
-
-const Section = styled.section`
-  max-width: 1024px;
-  padding: 24px;
-  margin: auto;
-`;
-
-const Title = styled.h1`
-  font-size: 3rem;
-`;
-
-const Content = styled.p`
-
-`;
+const Content = styled.p``;

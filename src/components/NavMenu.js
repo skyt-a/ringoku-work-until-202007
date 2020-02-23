@@ -16,6 +16,7 @@ const NavMenu = () => {
             <NavLink to="top">Top</NavLink>
             <NavLink to="about">「Hello,World!」について</NavLink>
             <NavLink to="aboutme">私について</NavLink>
+            <NavLink to="skill">スキルについて</NavLink>
           </NavLinks>
         </NavList> }
         <NavButton aria-controls="menu" aria-expanded="true" onClick={onOpen}>
@@ -71,7 +72,7 @@ const NavLinks = styled.div`
 
 const NavLink = styled(Link)`
     display: block;
-    width: 100%;
+    width: 90%;
     font-size: 2rem;
     text-decoration: none;
     margin-bottom: 12px;

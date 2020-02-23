@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../css/top.scss';
-import CommonHelmet from './common-helmet';
-import cloud from '../assets/images/cloud.png';
-import Gallery from '../components/Gallery'
+import CommonHelmet from './common/helmet';
 
 import thumb01 from '../assets/images/thumbs/coopet.png'
 import thumb02 from '../assets/images/thumbs/helloworld.png'

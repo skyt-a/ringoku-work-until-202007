@@ -1,15 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
 import NavMenu from "../components/NavMenu";
-import styled, { createGlobalStyle, keyframes } from "styled-components";
-import Logo, { LogoMini } from "../components/Logo";
+import styled from "styled-components";
+import { LogoMini } from "../components/Logo";
 import History from "../components/History";
-
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    overflow-y: auto;
-  }
-`
+import { GlobalStyle, Title, Section, Main } from "./common/component";
 
 export default ({ data }) => {
   return ( 
@@ -35,32 +30,6 @@ export default ({ data }) => {
     </Layout>
   );
 }
-
-const fadeIn = keyframes`
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-`
-
-const Main = styled.main`
-  animation: ${fadeIn} 0.3s linear;
-`;
-
-const Section = styled.section`
-  max-width: 1024px;
-  padding: 24px;
-  margin: auto;
-`;
-
-const Title = styled.h2`
-  font-size: 3rem;
-`;
 
 const Content = styled.p`
 
