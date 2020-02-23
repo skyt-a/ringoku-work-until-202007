@@ -17,6 +17,7 @@ const NavMenu = () => {
             <NavLink to="about">「Hello,World!」について</NavLink>
             <NavLink to="aboutme">私について</NavLink>
             <NavLink to="skill">スキルについて</NavLink>
+            <NavLink to="product">作ったもの</NavLink>
           </NavLinks>
         </NavList> }
         <NavButton aria-controls="menu" aria-expanded="true" onClick={onOpen}>
