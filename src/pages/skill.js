@@ -4,7 +4,7 @@ import NavMenu from "../components/NavMenu";
 import styled, { keyframes } from "styled-components";
 import { LogoMini } from "../components/Logo";
 import SkillStack from "../components/SkillStack";
-import { Section, Title, Subtitle, Main, GlobalStyle } from "./common/component";
+import { Section, Title, Subtitle, Main, GlobalStyle } from "../components/common/component";
 
 import ReactImg from '../assets/images/skills/react.svg';
 import AngularImg from '../assets/images/skills/angular.svg';

@@ -4,7 +4,7 @@ import NavMenu from "../components/NavMenu";
 import styled from "styled-components";
 import { LogoMini } from "../components/Logo";
 import History from "../components/History";
-import { GlobalStyle, Title, Section, Main } from "./common/component";
+import { GlobalStyle, Title, Section, Main } from "../components/common/component";
 
 export default ({ data }) => {
   return ( 

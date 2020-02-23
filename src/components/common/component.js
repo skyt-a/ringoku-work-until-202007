@@ -13,6 +13,7 @@ export const Section = styled.section`
 
 export const Title = styled.h2`
   font-size: 3rem;
+  font-weight: 900;
 `;
 
 export const Subtitle = styled.h3`

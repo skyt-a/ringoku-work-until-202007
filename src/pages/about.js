@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import NavMenu from "../components/NavMenu";
 import styled, { keyframes } from "styled-components";
 import { LogoMini } from "../components/Logo";
-import { Section, Main, Title, GlobalStyle } from "./common/component";
+import { Section, Main, Title, GlobalStyle } from "../components/common/component";
 
 export default ({ data }) => {
   return ( 

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {keyframes, createGlobalStyle} from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import NavMenu from '../components/NavMenu';
 
 import '../css/top.scss';
