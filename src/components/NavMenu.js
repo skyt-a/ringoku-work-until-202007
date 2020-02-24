@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled, { keyframes, createGlobalStyle } from 'styled-components';
 import { Link } from 'gatsby';
+import useOutsideClick from '../hooks/useOutsideClick';
 
 const NavMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
     const onOpen = () => setIsOpen(true);
     const onClose = () => setIsOpen(false);
+    const wrapperRef = useRef(null);
+    useOutsideClick(wrapperRef, onClose);
 
     return (
     <>
         {isOpen && 
-        <NavList>
+        <NavList ref={wrapperRef}>
           <Close onClick={onClose} aria-controls="menu" aria-expanded="false" />
           <NavLinks>
             <NavLink to="top">Top</NavLink>
@@ -47,6 +50,10 @@ const closeNav = keyframes`
 `;
 
 const Close = styled.span`
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+
     &::before,
     &::after {
         display: block;

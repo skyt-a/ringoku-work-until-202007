@@ -48,7 +48,7 @@ const SkillName = styled.p`
 
 const SkillImage = styled.img`
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
 `;
 
 export default SkillStack;
