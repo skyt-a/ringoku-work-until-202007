@@ -1,7 +1,9 @@
 @import './fonts.scss';
+@import '../assets/scss/libs/mixins';
+@import '../assets/css/font-awesome.min.css';
 
 html {
-    font-size: 10px;
+    font-size: 62.5%;
 
     @media (max-width: 767px) {
         font-size: 8px;
@@ -9,5 +11,14 @@ html {
 }
 
 body {
-    font-family: 'Noto Sans Japanese';
+    font-family: "Helvetica Neue",
+      Arial,
+      "Hiragino Kaku Gothic ProN",
+      "Hiragino Sans",
+      Meiryo,
+      sans-serif;
+}
+
+.icon {
+    @include icon;
 }

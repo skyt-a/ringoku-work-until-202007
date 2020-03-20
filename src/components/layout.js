@@ -1,14 +1,11 @@
-import React from 'react'
-import '../assets/scss/main.scss'
+import React from 'react';
+import '../css/common.scss';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { theme } from './Theme';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
     overflow-x: hidden;
-  }
-  html {
-    font-size: 10px;
   }
 `
 

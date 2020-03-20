@@ -18,7 +18,6 @@ const SkillItems = styled.ul`
     row-gap: 8px;
     column-gap: 12px;
     grid-template-columns: repeat(4, 1fr);
-    padding: 0;
     margin: 0;
     list-style: none;
 
@@ -28,11 +27,12 @@ const SkillItems = styled.ul`
 `;
 
 const SkillItem = styled.li`
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 8px 8px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     cursor: pointer;
 
@@ -42,12 +42,15 @@ const SkillItem = styled.li`
 `
 
 const SkillName = styled.p`
+    position: absolute;
+    bottom: -8px;
     text-align: center;
+    font-size: 1.6rem;
     font-weight: 700;
 `;
 
 const SkillImage = styled.img`
-    height: 200px;
+    width: 80%;
     object-fit: contain;
 `;
 
