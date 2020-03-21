@@ -3,6 +3,7 @@ templateKey: blog-post
 slug: GitKrakenを使ってみる
 title: GitKrakenを使ってみる
 date: 2020-03-21T13:20:46.378Z
+featuredImage: /images/uploads/kraken.png
 featuredImageDescription: ''
 tags:
   - 使ってみるシリーズ
