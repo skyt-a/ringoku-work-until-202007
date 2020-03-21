@@ -6,6 +6,7 @@ import { Main } from '../components/common/component'
 import NavMenu from '../components/NavMenu'
 import { LogoMini } from '../components/Logo'
 import Helmet from 'react-helmet'
+import '../css/post.scss';
 
 const Post = ({ data }) => {
   const post = data.markdownRemark
@@ -60,7 +61,7 @@ const PostImage = styled.img`
     display: block;
     order: 1;
     width: 100%;
-    max-height: 700px;
+    max-height: 450px;
     object-fit: cover;
 
     @media (max-width: 767px) {
