@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/common.scss';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { theme } from './Theme';
+import CommonHelmet from './common/helmet';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -14,6 +15,7 @@ class Template extends React.Component {
         const { children } = this.props
         return (
             <ThemeProvider theme={theme}>
+              <CommonHelmet />
                 {/* <Header /> */}
                 <GlobalStyle />
                 {children}

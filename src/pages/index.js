@@ -26,7 +26,6 @@ const TopIndex = () => {
     }, []);
     return (
         <Layout>
-            <CommonHelmet/>
             {isLoading ? <Loading /> : <Top />}
         </Layout>
     );

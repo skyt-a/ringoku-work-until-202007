@@ -19,6 +19,7 @@ const NavMenu = () => {
             <NavLink to="top">Top</NavLink>
             <NavLink to="about">「Hello,World!」について</NavLink>
             <NavLink to="aboutme">私について</NavLink>
+            <NavLink to="blog">ブログ</NavLink>
             <NavLink to="skill">スキルについて</NavLink>
             <NavLink to="product">作ったもの</NavLink>
           </NavLinks>
