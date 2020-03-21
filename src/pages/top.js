@@ -38,6 +38,7 @@ const Main = styled.main`
 
 const Icons = styled.ul`
   display: flex;
+  padding: 0;
   list-style: none;
 `;
 

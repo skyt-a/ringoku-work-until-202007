@@ -18,6 +18,7 @@ const SkillItems = styled.ul`
     row-gap: 8px;
     column-gap: 12px;
     grid-template-columns: repeat(4, 1fr);
+    padding: 0;
     margin: 0;
     list-style: none;
 

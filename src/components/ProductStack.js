@@ -44,8 +44,11 @@ const ProductItem = styled.li`
 `
 
 const ProduckLink = styled.a`
+    width: 100%;
+    text-align: center;
     text-decoration: none;
     border-bottom: none;
+    color: gray;
 `;
 
 const ProductName = styled.p`
@@ -54,7 +57,7 @@ const ProductName = styled.p`
 `;
 
 const ProductImage = styled.img`
-    height: 400px;
+    width: 80%;
     object-fit: cover;
 `;
 
