@@ -40,13 +40,13 @@ const PostSection = styled.section`
 `;
 
 const PostTitle = styled.h1`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  order: 2;
-  padding: 8px;
-  margin: 0;
-  font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 2;
+    padding: 8px;
+    margin: 0;
+    font-size: 3rem;
 `;
 
 const PostDate = styled.p`
