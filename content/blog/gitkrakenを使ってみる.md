@@ -26,7 +26,7 @@ GitKrakenとは先程ご説明したとおり、GitのGUIクライアントに�
 GitのGUIクライアントは複数あるようですが、GitKrakenはその中でも比較的新しめなようです。\
 Kraken(イカ)ということでGitHubのマスコットキャラクターのOctocatを意識しているのかもしれませんね。
 
-![](/images/uploads/Octocat.png) ![](/images/uploads/kraken.png)
+![](/images/uploads/kraken.png)
 
 前置きはこの辺にして、早速導入してみましょう！
 
