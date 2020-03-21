@@ -42,7 +42,6 @@ const BlogList = styled.div`
 const BlogSection = styled(Link)`
     display: flex;
     flex-flow: column wrap;
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     cursor: pointer;
 
@@ -54,6 +53,8 @@ const BlogSection = styled(Link)`
 const Thumbnail = styled.img`
     order: 1;
     width: 100%;
+    max-height: 400px;
+    object-fit: cover;
 `;
 
 const BlogTitle = styled.h3`
