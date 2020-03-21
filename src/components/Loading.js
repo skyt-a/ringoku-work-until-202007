@@ -75,7 +75,7 @@ const Circle = styled.div`
 const Element = styled.span`
     position: absolute;
     width: 100vmax;
-    height 100vmax;
+    height: 100vmax;
     border-radius: 100vmax;
     transform-origin: 60vmax 30vmax;
     will-change: transform;

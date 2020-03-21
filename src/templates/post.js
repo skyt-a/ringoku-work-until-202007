@@ -34,6 +34,8 @@ const Post = ({ data }) => {
 const PostSection = styled.section`
     display: flex;
     flex-flow: column wrap;
+    max-width: 1024px;
+    margin: auto;
 `;
 
 const PostTitle = styled.h1`

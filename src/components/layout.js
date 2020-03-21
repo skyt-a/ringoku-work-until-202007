@@ -8,6 +8,9 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     overflow-x: hidden;
   }
+  body, a {
+    color: ${props => props.theme.black};
+  }
 `
 
 class Template extends React.Component {

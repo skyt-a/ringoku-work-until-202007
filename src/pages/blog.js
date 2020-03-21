@@ -40,7 +40,6 @@ const BlogSection = styled(Link)`
     flex-flow: column wrap;
     box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3);
     text-decoration: none;
-    color: gray;
     cursor: pointer;
 
     @media (max-width: 767px) {

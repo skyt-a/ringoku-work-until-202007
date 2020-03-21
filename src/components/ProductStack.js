@@ -17,8 +17,8 @@ const ProductStack = (props) => (
 
 const ProductItems = styled.ul`
     display: grid;
-    row-gap: 8px;
-    column-gap: 12px;
+    row-gap: 16px;
+    column-gap: 16px;
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
     margin: 0;
@@ -48,7 +48,6 @@ const ProduckLink = styled.a`
     text-align: center;
     text-decoration: none;
     border-bottom: none;
-    color: gray;
 `;
 
 const ProductName = styled.p`
