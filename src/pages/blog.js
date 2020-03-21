@@ -33,6 +33,10 @@ const BlogList = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 8px;
+
+    @media (max-width: 767px) {
+        display: block;
+    }
 `;
 
 const BlogSection = styled(Link)`
