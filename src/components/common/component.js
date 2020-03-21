@@ -9,6 +9,7 @@ export const Section = styled.section`
   max-width: 1024px;
   padding: 24px;
   margin: auto;
+  font-size: 1.8rem;
 `;
 
 export const Title = styled.h2`
