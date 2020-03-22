@@ -57,6 +57,7 @@ const ProductName = styled.p`
 
 const ProductImage = styled.img`
     width: 80%;
+    margin: auto;
     object-fit: cover;
 `;
 
