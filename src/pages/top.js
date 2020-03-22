@@ -28,15 +28,18 @@ const Top = () => (
 );
 
 const Main = styled.main`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100vw;
-    height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
 `;
 
 const Icons = styled.ul`
+  position: absolute;
+  bottom: 0;
   display: flex;
   padding: 0;
   list-style: none;
