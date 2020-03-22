@@ -3,7 +3,7 @@ templateKey: blog-post
 slug: GitKrakenを使ってみる
 title: GitKrakenを使ってみる
 date: 2020-03-21T13:20:46.378Z
-featuredImage: /images/uploads/kraken.png
+featuredImage: /images/uploads/kraken0.png
 featuredImageDescription: ''
 tags:
   - 使ってみるシリーズ
@@ -24,8 +24,8 @@ GitKrakenとは先程ご説明したとおり、GitのGUIクライアントに�
 GitのGUIクライアントは複数あるようですが、GitKrakenはその中でも比較的新しめなようです。<br>
 Kraken(イカ)ということでGitHubのマスコットキャラクターのOctocatを意識しているのかもしれませんね。
 <section style="display:flex;align-items: flex-start;">
-<img src="/images/uploads/Octocat.png" style="width:50%;height:auto;"/>
-<img src="/images/uploads/kraken.png" style="width:50%;height:auto;" />
+<img src="/images/uploads/Octocat.png" style="width:auto;height:200px;"/>
+<img src="/images/uploads/kraken.png" style="width:auto;height: 200px;" />
 </section>
 前置きはこの辺にして、早速導入してみましょう！
 
