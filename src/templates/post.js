@@ -73,8 +73,9 @@ const PostImage = styled.img`
 
 const PostContent = styled.div`
     order: 4;
+    box-sizing: border-box;
     max-width: 100%;
-    padding: 0;
+    padding: 8px;
     font-size: 1.6rem;
 `;
 
